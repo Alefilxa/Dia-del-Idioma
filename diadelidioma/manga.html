@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los 3 Pilares del Manga | Entre Viñetas y Palabras</title>
+    <link rel="stylesheet" href="./css/manga.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <header class="main-header">
+        <nav>
+            <div class="logo">
+                <a href="index.html" class="logo-text">← Volver al Inicio</a>
+            </div>
+            <div class="menu">
+                <a href="#pokemon">Pokémon</a>
+                <a href="#dragonball">Dragon Ball</a>
+                <a href="#saintseiya">Saint Seiya</a>
+                <a href="#comparativa">Comparativa</a>
+                <a href="#galeria">Galería</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero-manga">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">Trilogía Legendaria</div>
+            <h1 class="hero-title">
+                Los 3 Pilares del<br>
+                <span class="highlight">Manga en Español</span>
+            </h1>
+            <p class="hero-subtitle">
+                Pokémon • Dragon Ball • Saint Seiya
+            </p>
+            <p class="hero-description">
+                Tres obras que revolucionaron no solo el cómic japonés, sino que 
+                transformaron para siempre el idioma español, introduciendo nuevos 
+                términos, expresiones y una forma única de contar historias.
+            </p>
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="document.getElementById('pokemon').scrollIntoView({behavior: 'smooth'})">
+                    Explorar los 3 Mangas
+                </button>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Descubrir</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-container">
+        <div class="marquee">
+            <span>★ POKÉMON</span>
+            <span>★ DRAGON BALL</span>
+            <span>★ SAINT SEIYA</span>
+            <span>★ 30+ AÑOS DE HISTORIA</span>
+            <span>★ MILLONES DE FANS</span>
+            <span>★ POKÉMON</span>
+            <span>★ DRAGON BALL</span>
+            <span>★ SAINT SEIYA</span>
+        </div>
+    </div>
+
+    <!-- INTRODUCCIÓN -->
+    <section class="section-intro">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <div class="section-tag">CONTEXTO HISTÓRICO</div>
+                    <h2 class="section-title">
+                        La Era Dorada del<br>
+                        <span class="text-highlight">Manga en Latinoamérica</span>
+                    </h2>
+                    <p class="lead">
+                        Entre 1990 y 2000, tres series marcaron el inicio de una revolución 
+                        cultural sin precedentes en el mundo hispanohablante.
+                    </p>
+                    <p>
+                        Estas obras no solo llegaron para entretener: llegaron para quedarse, 
+                        adaptándose al español de manera creativa, introduciendo palabras 
+                        japonesas, creando nuevas expresiones y estableciendo un vocabulario 
+                        compartido entre generaciones de fans.
+                    </p>
+                    <div class="intro-stats">
+                        <div class="intro-stat">
+                            <span class="stat-number">1984</span>
+                            <span class="stat-label">Inicio Dragon Ball</span>
+                        </div>
+                        <div class="intro-stat">
+                            <span class="stat-number">1986</span>
+                            <span class="stat-label">Inicio Saint Seiya</span>
+                        </div>
+                        <div class="intro-stat">
+                            <span class="stat-number">1996</span>
+                            <span class="stat-label">Inicio Pokémon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro-visual">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">1984</div>
+                            <div class="timeline-content">Dragon Ball</div>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">1986</div>
+                            <div class="timeline-content">Saint Seiya</div>
+                        </div>
+                        <div class="timeline-line"></div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">1996</div>
+                            <div class="timeline-content">Pokémon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POKÉMON -->
+    <section id="pokemon" class="section-manga-detail section-pokemon">
+        <div class="container">
+            <div class="manga-header">
+                <div class="section-tag">FENÓMENO GLOBAL</div>
+                <h2 class="section-title">Pokémon</h2>
+                <p class="manga-subtitle">"¡Atrápalos a todos!"</p>
+            </div>
+
+            <div class="manga-content">
+                <div class="manga-info-grid">
+                    <div class="manga-main-info">
+                        <div class="manga-card-large">
+                            <div class="manga-image-container">
+                                <img src="./img/pokemoon.avif" alt="Pokémon">
+                                <div class="manga-year-badge">1996 - Presente</div>
+                            </div>
+                            <div class="manga-overview">
+                                <h3>Más que un Juego: Un Imperio Transmedia</h3>
+                                <p>
+                                    Originalmente creado por <strong>Satoshi Tajiri</strong> como un videojuego 
+                                    de Game Boy en 1996, Pokémon se convirtió rápidamente en el fenómeno 
+                                    transmedia más grande de la historia. Lo que comenzó como "Pocket Monsters" 
+                                    en Japón, se transformó en una franquicia que abarca videojuegos, anime, 
+                                    cartas coleccionables, películas, juguetes y más.
+                                </p>
+                                <p>
+                                    Su llegada al mundo hispanohablante en 1999 marcó un antes y un después: 
+                                    millones de niños y jóvenes aprendieron a coleccionar, competir y soñar 
+                                    con ser "el mejor, como nadie lo fue".
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="impact-section">
+                            <h3>Impacto en el Idioma Español</h3>
+                            <div class="impact-grid">
+                                <div class="impact-card">
+                                    <div class="impact-icon">🎮</div>
+                                    <h4>Nuevos Verbos</h4>
+                                    <p>"Evolucionar" adquirió un nuevo significado más allá de la biología. 
+                                    "Atrapar" se convirtió en sinónimo de conseguir algo deseado.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">📊</div>
+                                    <h4>Sistema de Tipos</h4>
+                                    <p>Introdujo conceptos como "tipo fuego", "tipo agua", "débil contra", 
+                                    "fuerte contra" en el vocabulario cotidiano de los fans.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">🌏</div>
+                                    <h4>Nombres Japoneses</h4>
+                                    <p>Pikachu, Charizard, Mewtwo: nombres japoneses que se volvieron 
+                                    universales y se pronuncian igual en español.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">⚔️</div>
+                                    <h4>Términos de Batalla</h4>
+                                    <p>"Ataque", "defensa", "PS" (puntos de salud), "nivel", "experiencia": 
+                                    vocabulario gamer estandarizado.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terms-section">
+                            <h3>Términos Adoptados del Japonés</h3>
+                            <div class="terms-list">
+                                <div class="term-item">
+                                    <span class="term-japanese">Pokémon</span>
+                                    <span class="term-meaning">"Monstruos de Bolsillo"</span>
+                                    <span class="term-note">Contracción de "Pocket Monsters"</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Entrenador</span>
+                                    <span class="term-meaning">Persona que cría y batalla con Pokémon</span>
+                                    <span class="term-note">Adaptación del concepto japonés</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Gimnasio</span>
+                                    <span class="term-meaning">Lugar donde se desafía a líderes</span>
+                                    <span class="term-note">Nuevo significado en contexto Pokémon</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Liga Pokémon</span>
+                                    <span class="term-meaning">Competición máxima de entrenadores</span>
+                                    <span class="term-note">Torneo final de cada región</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="phrases-section">
+                            <h3>Frases Icónicas</h3>
+                            <div class="phrases-grid">
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Yo quiero ser el mejor, como nadie lo fue!"</p>
+                                    <span class="phrase-author">— Tema de apertura</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Atrápalos a todos!"</p>
+                                    <span class="phrase-author">— Eslogan principal</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Pikachu, yo te elijo a ti!"</p>
+                                    <span class="phrase-author">— Ash Ketchum</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Prepárense para problemas aún mayores!"</p>
+                                    <span class="phrase-author">— Team Rocket</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="manga-sidebar">
+                        <div class="sidebar-card">
+                            <h4>Datos Clave</h4>
+                            <ul class="sidebar-list">
+                                <li><strong>Creador:</strong> Satoshi Tajiri</li>
+                                <li><strong>Año:</strong> 1996</li>
+                                <li><strong>Género:</strong> Aventura, Fantasía</li>
+                                <li><strong>Formato:</strong> Videojuego, Anime, Manga</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card highlight">
+                            <h4>Curiosidad</h4>
+                            <p>
+                                El nombre "Pokémon" fue elegido cuidadosamente para ser fácil 
+                                de pronunciar en japonés, inglés y español, facilitando su 
+                                globalización.
+                            </p>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h4>Personajes Principales</h4>
+                            <ul class="sidebar-list">
+                                <li>Ash Ketchum (Satoshi)</li>
+                                <li>Pikachu</li>
+                                <li>Misty (Kasumi)</li>
+                                <li>Brock (Takeshi)</li>
+                                <li>Team Rocket</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h4>Impacto Cultural</h4>
+                            <p>
+                                Pokémon generó la "Pokémon Go Fever" en 2016, demostrando 
+                                que después de 20 años, seguía siendo relevante para nuevas 
+                                generaciones.
+                            </p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DRAGON BALL -->
+    <section id="dragonball" class="section-manga-detail section-dragonball">
+        <div class="container">
+            <div class="manga-header">
+                <div class="section-tag">LA ÉPICA DEFINITIVA</div>
+                <h2 class="section-title">Dragon Ball</h2>
+                <p class="manga-subtitle">"¡Es más poderoso de lo que imaginaba!"</p>
+            </div>
+
+            <div class="manga-content">
+                <div class="manga-info-grid">
+                    <div class="manga-main-info">
+                        <div class="manga-card-large">
+                            <div class="manga-image-container">
+                                <img src="./img/dragon-ball-z.jpg" alt="Dragon Ball">
+                                <div class="manga-year-badge">1984 - 1995</div>
+                            </div>
+                            <div class="manga-overview">
+                                <h3>La Obra Maestra de Akira Toriyama</h3>
+                                <p>
+                                    <strong>Dragon Ball</strong> (1984-1995) de Akira Toriyama es considerada 
+                                    universalmente como el manga que definió el género shonen (juvenil) moderno. 
+                                    Lo que comenzó como una aventura inspirada en "Viaje al Oeste" evolucionó 
+                                    hacia una épica de artes marciales y poder sobrehumano.
+                                </p>
+                                <p>
+                                    Su impacto en Latinoamérica fue devastador: el doblaje al español (especialmente 
+                                    el mexicano) creó un estándar de calidad y frases que se grabaron en la memoria 
+                                    colectiva. Dragon Ball Z (1989-1996) llevó la acción a niveles estratosféricos, 
+                                    literalmente.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="impact-section">
+                            <h3>Revolución Lingüística</h3>
+                            <div class="impact-grid">
+                                <div class="impact-card">
+                                    <div class="impact-icon">💪</div>
+                                    <h4>Cultura del Poder</h4>
+                                    <p>"Nivel de pelea", "poder oculto", "transformación", "superación": 
+                                    Dragon Ball popularizó el concepto de crecimiento constante.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">🔥</div>
+                                    <h4>Técnicas de Ataque</h4>
+                                    <p>"Kamehameha", "Genkidama", "Bola de Fuego": nombres japoneses que 
+                                    todos los fans memorizaron y usan en la vida diaria.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">⚡</div>
+                                    <h4>Transformaciones</h4>
+                                    <p>"Super Saiyajin" se convirtió en sinónimo de alcanzar un nuevo nivel, 
+                                    superarse a uno mismo.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">📢</div>
+                                    <h4>Doblaje Legendario</h4>
+                                    <p>El doblaje latino creó un español único, con gritos épicos y frases 
+                                    que se volvieron memes antes de que existiera internet.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terms-section">
+                            <h3>Términos que Adoptamos</h3>
+                            <div class="terms-list">
+                                <div class="term-item">
+                                    <span class="term-japanese">Ki / Energía</span>
+                                    <span class="term-meaning">Fuerza vital, poder interior</span>
+                                    <span class="term-note">Concepto oriental occidentalizado</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Saiyajin</span>
+                                    <span class="term-meaning">Guerrero de una raza alienígena</span>
+                                    <span class="term-note">Pronunciación adaptada al español</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Zenkai</span>
+                                    <span class="term-meaning">Poder que aumenta tras recuperarse</span>
+                                    <span class="term-note">Término técnico del manga</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Kamehameha</span>
+                                    <span class="term-meaning">Ataque de energía icónico</span>
+                                    <span class="term-note">Nombre del Rey Kamehameha de Hawaii</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Senzu</span>
+                                    <span class="term-meaning">Semilla que cura y restaura energía</span>
+                                    <span class="term-note">"Alimento mágico" del anime</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="phrases-section">
+                            <h3>Frases que Marcaron Generaciones</h3>
+                            <div class="phrases-grid">
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Es más poderoso de lo que imaginaba!"</p>
+                                    <span class="phrase-author">— Frase recurrente</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Kamehameha!"</p>
+                                    <span class="phrase-author">— Goku</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡No te perdonaré... por haber lastimado a mis amigos!"</p>
+                                    <span class="phrase-author">— Gohan</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Soy el número 1!"</p>
+                                    <span class="phrase-author">— Vegeta</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Este es mi verdadero poder!"</p>
+                                    <span class="phrase-author">— Villanos varios</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Hasta yo puedo con ese tipo!"</p>
+                                    <span class="phrase-author">— Krilin</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="manga-sidebar">
+                        <div class="sidebar-card">
+                            <h4>Datos Clave</h4>
+                            <ul class="sidebar-list">
+                                <li><strong>Autor:</strong> Akira Toriyama</li>
+                                <li><strong>Años:</strong> 1984-1995</li>
+                                <li><strong>Género:</strong> Shonen, Acción</li>
+                                <li><strong>Volúmenes:</strong> 42 tomos</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card highlight">
+                            <h4>Legado</h4>
+                            <p>
+                                Dragon Ball estableció las bases de todos los shonen modernos: 
+                                Naruto, One Piece, Bleach le deben su estructura narrativa.
+                            </p>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h4>Personajes Legendarios</h4>
+                            <ul class="sidebar-list">
+                                <li>Son Goku</li>
+                                <li>Vegeta</li>
+                                <li>Gohan</li>
+                                <li>Piccolo</li>
+                                <li>Freezer</li>
+                                <li>Cell</li>
+                                <li>Majin Buu</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h4>Transformaciones</h4>
+                            <ul class="sidebar-list">
+                                <li>Super Saiyajin</li>
+                                <li>Super Saiyajin 2</li>
+                                <li>Super Saiyajin 3</li>
+                                <li>Super Saiyajin God</li>
+                                <li>Ultra Instinto</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAINT SEIYA -->
+    <section id="saintseiya" class="section-manga-detail section-saintseiya">
+        <div class="container">
+            <div class="manga-header">
+                <div class="section-tag">MITOLOGÍA Y ACCIÓN</div>
+                <h2 class="section-title">Saint Seiya</h2>
+                <p class="manga-subtitle">"¡Por Atenea!"</p>
+            </div>
+
+            <div class="manga-content">
+                <div class="manga-info-grid">
+                    <div class="manga-main-info">
+                        <div class="manga-card-large">
+                            <div class="manga-image-container">
+                                <img src="./img/caballerosbanner.jpg" alt="Saint Seiya">
+                                <div class="manga-year-badge">1986 - 1990</div>
+                            </div>
+                            <div class="manga-overview">
+                                <h3>Caballeros del Zodiaco: Mitología Hecha Manga</h3>
+                                <p>
+                                    <strong>Saint Seiya</strong> (1986-1990) de Masami Kurumada es una obra única 
+                                    que fusiona la mitología griega con la ciencia ficción y las artes marciales. 
+                                    En occidente, especialmente en Latinoamérica y España, se le conoce como 
+                                    "Los Caballeros del Zodiaco".
+                                </p>
+                                <p>
+                                    Su narrativa dramática, cargada de emociones intensas y sacrificios épicos, 
+                                    conectó profundamente con el público hispano. La armadura de cada caballero, 
+                                    basada en constelaciones, y el concepto del "cosmo" como energía interior, 
+                                    crearon un universo fascinante que enriqueció el vocabulario fantástico.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="impact-section">
+                            <h3>Aportes al Español</h3>
+                            <div class="impact-grid">
+                                <div class="impact-card">
+                                    <div class="impact-icon">⭐</div>
+                                    <h4>Constelaciones</h4>
+                                    <p>Popularizó nombres de constelaciones: Pegaso, Andrómeda, Dragón, 
+                                    Fénix, Cisne. Muchos fans aprendieron astronomía básica gracias al anime.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">🌌</div>
+                                    <h4>El Cosmo</h4>
+                                    <p>"Quemar el cosmo", "elevar el cosmo": el concepto de energía interior 
+                                    se volvió parte del léxico de los fans.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">⚔️</div>
+                                    <h4>Técnicas con Nombre</h4>
+                                    <p>"Meteoros de Pegaso", "Rueda de Fuego", "Polvo de Diamantes": 
+                                    nombres poéticos y épicos para los ataques.</p>
+                                </div>
+                                <div class="impact-card">
+                                    <div class="impact-icon">💫</div>
+                                    <h4>Dramatismo</h4>
+                                    <p>Saint Seiya enseñó a los fans a expresar emociones intensas: 
+                                    gritar el nombre de los ataques, llorar por los personajes, creer en la amistad.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terms-section">
+                            <h3>Vocabulario Saint Seiya</h3>
+                            <div class="terms-list">
+                                <div class="term-item">
+                                    <span class="term-japanese">Cosmo / Cosmos</span>
+                                    <span class="term-meaning">Energía vital del universo interior</span>
+                                    <span class="term-note">Concepto central de la serie</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Cloth / Armadura</span>
+                                    <span class="term-meaning">Armadura sagrada de cada caballero</span>
+                                    <span class="term-note">También llamada "Santa"</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Séptimo Sentido</span>
+                                    <span class="term-meaning">Conciencia cósmica superior</span>
+                                    <span class="term-note">Nivel máximo de poder</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Pequeño Cosmo</span>
+                                    <span class="term-meaning">Energía básica de los humanos</span>
+                                    <span class="term-note">Contraste con el Gran Cosmo</span>
+                                </div>
+                                <div class="term-item">
+                                    <span class="term-japanese">Atenea</span>
+                                    <span class="term-meaning">Diosa a quien protegen los caballeros</span>
+                                    <span class="term-note">Reencarnada en cada época</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="phrases-section">
+                            <h3>Frases Memorables</h3>
+                            <div class="phrases-grid">
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Por Atenea!"</p>
+                                    <span class="phrase-author">— Grito de batalla</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Meteoros de Pegaso!"</p>
+                                    <span class="phrase-author">— Seiya</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡Quema tu cosmo al máximo!"</p>
+                                    <span class="phrase-author">— Dohko</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡La amistad es mi verdadero poder!"</p>
+                                    <span class="phrase-author">— Tema recurrente</span>
+                                </div>
+                                <div class="phrase-card">
+                                    <p class="phrase-text">"¡No me rendiré... nunca!"</p>
+                                    <span class="phrase-author">— Seiya</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sagas-section">
+                            <h3>Las Sagas que Marcaron Historia</h3>
+                            <div class="sagas-grid">
+                                <div class="saga-card">
+                                    <h4>Santuario</h4>
+                                    <p>Los 12 caballeros dorados y la batalla por salvar a Atenea. 
+                                    La saga más icónica y emotiva.</p>
+                                </div>
+                                <div class="saga-card">
+                                    <h4>Asgard</h4>
+                                    <p>Los dioses nórdicos y la batalla en tierras heladas. 
+                                    Exclusiva del anime.</p>
+                                </div>
+                                <div class="saga-card">
+                                    <h4>Poseidón</h4>
+                                    <p>Los 7 Generales Marinos y el dominio de los océanos. 
+                                    Mitología griega pura.</p>
+                                </div>
+                                <div class="saga-card">
+                                    <h4>Hades</h4>
+                                    <p>El inframundo y la batalla final contra el dios de la muerte. 
+                                    El epílogo épico.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="manga-sidebar">
+                        <div class="sidebar-card">
+                            <h4>Datos Clave</h4>
+                            <ul class="sidebar-list">
+                                <li><strong>Autor:</strong> Masami Kurumada</li>
+                                <li><strong>Años:</strong> 1986-1990</li>
+                                <li><strong>Género:</strong> Acción, Mitología</li>
+                                <li><strong>Volúmenes:</strong> 28 tomos</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card highlight">
+                            <h4>Curiosidad</h4>
+                            <p>
+                                En Japón se llama "Saint Seiya", pero en Latinoamérica y España 
+                                se tradujo como "Caballeros del Zodiaco" para hacerlo más atractivo.
+                            </p>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h4>Caballeros de Bronce</h4>
+                            <ul class="sidebar-list">
+                                <li>Seiya (Pegaso)</li>
+                                <li>Shiryu (Dragón)</li>
+                                <li>Hyoga (Cisne)</li>
+                                <li>Shun (Andrómeda)</li>
+                                <li>Ikki (Fénix)</li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-card">
+                            <h4>Caballeros Dorados</h4>
+                            <ul class="sidebar-list">
+                                <li>Aioria (Leo)</li>
+                                <li>Milo (Escorpio)</li>
+                                <li>Saga (Géminis)</li>
+                                <li>Shaka (Virgo)</li>
+                                <li>Dohko (Libra)</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPARATIVA -->
+    <section id="comparativa" class="section-comparison">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-tag">ANÁLISIS COMPARATIVO</div>
+                <h2 class="section-title">Tres Estilos, Un Legado</h2>
+                <p>Cada manga aportó algo único al idioma y la cultura hispana</p>
+            </div>
+
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <div class="comp-col">Característica</div>
+                    <div class="comp-col pokemon">Pokémon</div>
+                    <div class="comp-col dragonball">Dragon Ball</div>
+                    <div class="comp-col saintseiya">Saint Seiya</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comp-label">Género Principal</div>
+                    <div class="comp-data">Aventura, Colección</div>
+                    <div class="comp-data">Acción, Artes Marciales</div>
+                    <div class="comp-data">Mitología, Drama</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comp-label">Tema Central</div>
+                    <div class="comp-data">Amistad, Crecimiento</div>
+                    <div class="comp-data">Superación, Poder</div>
+                    <div class="comp-data">Sacrificio, Lealtad</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comp-label">Aporte Lingüístico</div>
+                    <div class="comp-data">Nombres de Pokémon, tipos</div>
+                    <div class="comp-data">Técnicas, transformaciones</div>
+                    <div class="comp-data">Constelaciones, cosmo</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comp-label">Frase Icónica</div>
+                    <div class="comp-data">"Atrápalos a todos"</div>
+                    <div class="comp-data">"Kamehameha"</div>
+                    <div class="comp-data">"Por Atenea"</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comp-label">Impacto Cultural</div>
+                    <div class="comp-data">Fenómeno transmedia</div>
+                    <div class="comp-data">Revolución del shonen</div>
+                    <div class="comp-data">Mitología popularizada</div>
+                </div>
+                
+                <div class="comparison-row">
+                    <div class="comp-label">Año de Inicio</div>
+                    <div class="comp-data">1996</div>
+                    <div class="comp-data">1984</div>
+                    <div class="comp-data">1986</div>
+                </div>
+            </div>
+
+            <div class="comparison-summary">
+                <h3>Lo que los Une</h3>
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <span class="summary-icon">🤝</span>
+                        <h4>Amistad</h4>
+                        <p>Los tres enfatizan el poder de los lazos entre personajes</p>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon">💪</span>
+                        <h4>Crecimiento</h4>
+                        <p>Protagonistas que evolucionan y se superan constantemente</p>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon">🌟</span>
+                        <h4>Sueños</h4>
+                        <p>Personajes que luchan por alcanzar sus metas</p>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-icon">🌍</span>
+                        <h4>Globalización</h4>
+                        <p>Adaptación exitosa al español y otras lenguas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="section-gallery-manga">
+        <div class="container">
+            <div class="section-header-center">
+                <div class="section-tag">GALERÍA</div>
+                <h2 class="section-title">Momentos Épicos</h2>
+            </div>
+
+            <div class="gallery-manga-grid">
+                <div class="gallery-manga-item large">
+                    <img src="./img/pokemongaleria.jpg" alt="Pokémon">
+                    <div class="gallery-manga-caption">
+                        <h4>Pokémon</h4>
+                        <p>La aventura comienza</p>
+                    </div>
+                </div>
+                <div class="gallery-manga-item">
+                    <img src="./img/dragon.avif" alt="Dragon Ball">
+                    <div class="gallery-manga-caption">
+                        <h4>Dragon Ball</h4>
+                    </div>
+                </div>
+                <div class="gallery-manga-item">
+                    <img src="./img/caballeroszo.avif" alt="Saint Seiya">
+                    <div class="gallery-manga-caption">
+                        <h4>Saint Seiya</h4>
+                    </div>
+                </div>
+                <div class="gallery-manga-item wide">
+                    <img src="./img/animebanner.jpg" alt="Otros Mangas">
+                    <div class="gallery-manga-caption">
+                        <h4>Otros mangas</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section-cta-manga">
+        <div class="container">
+            <div class="cta-manga-content">
+                <h2>¿Quieres Saber Más?</h2>
+                <p>Explora nuestra página principal y descubre cómo el manga transformó el idioma español</p>
+                <a href="index.html" class="btn-primary btn-large">Volver al Inicio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Entre Viñetas y Palabras</h3>
+                    <p>El idioma también se dibuja.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Explora</h4>
+                    <ul>
+                        <li><a href="index.html">Página Principal</a></li>
+                        <li><a href="#pokemon">Pokémon</a></li>
+                        <li><a href="#dragonball">Dragon Ball</a></li>
+                        <li><a href="#saintseiya">Saint Seiya</a></li>
+                    </ul>
+                </div>
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>Día del Idioma Español 2026</p>
+                    <p>© 2026 Grupo de Diseño Gráfico</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll indicator
+            const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    const nextSection = document.querySelector('.marquee-container');
+                    if (nextSection) {
+                        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+
+            // Smooth scroll para links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

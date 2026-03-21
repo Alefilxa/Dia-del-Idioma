@@ -1,0 +1,1263 @@
+/* ========================================
+   VARIABLES Y RESET
+   ======================================== */
+:root {
+    --color-primary: #F4D03F;        /* Amarillo mostaza */
+    --color-secondary: #1a1a1a;      /* Negro carbón */
+    --color-accent: #F5F5F0;         /* Crema suave */
+    --color-white: #FFFFFF;
+    --color-gray: #666666;
+    --color-light-gray: #e0e0e0;
+    
+    --font-primary: 'Inter', sans-serif;
+    --font-display: 'Space Grotesk', sans-serif;
+    
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.15);
+    --shadow-lg: 0 8px 30px rgba(0,0,0,0.2);
+    --shadow-xl: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--color-white);
+    color: var(--color-secondary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.text-highlight {
+    color: var(--color-primary);
+    position: relative;
+    display: inline-block;
+}
+
+.section-tag {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 0.5rem 1.5rem;
+    font-weight: 800;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    transform: skew(-5deg);
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+}
+
+.lead {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.section-header-center {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+/* ========================================
+   NAVEGACIÓN
+   ======================================== */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid var(--color-secondary);
+    transition: var(--transition);
+}
+
+.main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    transition: var(--transition);
+}
+
+.logo-text:hover {
+    color: var(--color-primary);
+}
+
+.menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.menu a {
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    transition: var(--transition);
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--color-primary);
+    transition: var(--transition);
+}
+
+.menu a:hover::after {
+    width: 100%;
+}
+
+/* ========================================
+   HERO SECTION MANGA
+   ======================================== */
+.hero-manga {
+    min-height: 100vh;
+    background: var(--color-secondary);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 8rem;
+    overflow: hidden;
+}
+
+.hero-manga::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, var(--color-primary) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(244, 208, 63, 0.3) 0%, transparent 40%);
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.hero-content {
+    max-width: 1000px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 3rem;
+}
+
+.hero-badge {
+    display: inline-block;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 0.75rem 2rem;
+    font-weight: 900;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    transform: skew(-5deg);
+    border: 3px solid var(--color-secondary);
+    box-shadow: 5px 5px 0 var(--color-white);
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6.5rem);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+    letter-spacing: -3px;
+}
+
+.hero-title .highlight {
+    color: var(--color-primary);
+    display: block;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: #ccc;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    border: 3px solid var(--color-primary);
+    padding: 1.25rem 3rem;
+    font-family: var(--font-primary);
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 5px 5px 0 var(--color-white);
+}
+
+.btn-primary:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 8px 8px 0 var(--color-white);
+}
+
+.btn-large {
+    padding: 1.5rem 3.5rem;
+    font-size: 1.1rem;
+}
+
+.hero-scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    z-index: 10;
+    transition: var(--transition);
+    animation: bounce 2s infinite;
+}
+
+.hero-scroll-indicator:hover {
+    color: var(--color-primary);
+    transform: translateX(-50%) translateY(5px);
+}
+
+.scroll-line {
+    width: 3px;
+    height: 50px;
+    background: var(--color-primary);
+    border-radius: 2px;
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+    40% { transform: translateX(-50%) translateY(-15px); }
+    60% { transform: translateX(-50%) translateY(-8px); }
+}
+
+@keyframes scrollLine {
+    0% { height: 30px; opacity: 1; }
+    50% { height: 50px; opacity: 0.5; }
+    100% { height: 30px; opacity: 1; }
+}
+
+/* ========================================
+   MARQUEE
+   ======================================== */
+.marquee-container {
+    background: var(--color-primary);
+    padding: 1.5rem 0;
+    overflow: hidden;
+    border-top: 3px solid var(--color-secondary);
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.marquee {
+    display: flex;
+    gap: 4rem;
+    animation: marquee 20s linear infinite;
+    white-space: nowrap;
+}
+
+.marquee span {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.25rem;
+    color: var(--color-secondary);
+    letter-spacing: 2px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ========================================
+   SECCIÓN INTRO
+   ======================================== */
+.section-intro {
+    background: var(--color-accent);
+    padding: 6rem 0;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.intro-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--color-gray);
+}
+
+.intro-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--color-light-gray);
+}
+
+.intro-stat {
+    text-align: center;
+}
+
+.intro-stat .stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    line-height: 1;
+}
+
+.intro-stat .stat-label {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+.intro-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem;
+    background: var(--color-white);
+    border: 4px solid var(--color-secondary);
+    box-shadow: 8px 8px 0 var(--color-primary);
+    width: 100%;
+    max-width: 400px;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-year {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--color-primary);
+    background: var(--color-secondary);
+    padding: 0.5rem 1rem;
+}
+
+.timeline-content {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.timeline-line {
+    width: 3px;
+    height: 40px;
+    background: var(--color-primary);
+    margin: 0 auto;
+}
+
+/* ========================================
+   SECCIONES MANGA DETALLE
+   ======================================== */
+.section-manga-detail {
+    padding: 6rem 0;
+    border-top: 3px solid var(--color-secondary);
+}
+
+.section-pokemon {
+    background: var(--color-white);
+}
+
+.section-dragonball {
+    background: var(--color-accent);
+}
+
+.section-saintseiya {
+    background: var(--color-white);
+}
+
+.manga-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.manga-subtitle {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-style: italic;
+}
+
+.manga-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 3rem;
+}
+
+.manga-card-large {
+    background: var(--color-white);
+    border: 4px solid var(--color-secondary);
+    box-shadow: 8px 8px 0 var(--color-primary);
+    overflow: hidden;
+    margin-bottom: 3rem;
+}
+
+.manga-image-container {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-bottom: 4px solid var(--color-secondary);
+}
+
+.manga-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.manga-card-large:hover .manga-image-container img {
+    transform: scale(1.05);
+}
+
+.manga-year-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 0.75rem 1.5rem;
+    font-weight: 900;
+    font-size: 0.9rem;
+    border: 3px solid var(--color-secondary);
+}
+
+.manga-overview {
+    padding: 2.5rem;
+}
+
+.manga-overview h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+}
+
+.manga-overview p {
+    color: var(--color-gray);
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+/* Impact Section */
+.impact-section {
+    margin-bottom: 3rem;
+}
+
+.impact-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 5px solid var(--color-primary);
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.impact-card {
+    background: var(--color-accent);
+    border: 3px solid var(--color-secondary);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.impact-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.impact-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+.impact-card p {
+    color: var(--color-gray);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Terms Section */
+.terms-section {
+    margin-bottom: 3rem;
+}
+
+.terms-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 5px solid var(--color-primary);
+}
+
+.terms-list {
+    display: grid;
+    gap: 1rem;
+}
+
+.term-item {
+    background: var(--color-white);
+    border: 3px solid var(--color-secondary);
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 1rem;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.term-item:hover {
+    background: var(--color-primary);
+    transform: translateX(10px);
+}
+
+.term-japanese {
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+
+.term-meaning {
+    font-weight: 600;
+    color: var(--color-gray);
+}
+
+.term-note {
+    font-size: 0.85rem;
+    color: var(--color-gray);
+    font-style: italic;
+}
+
+.term-item:hover .term-meaning,
+.term-item:hover .term-note {
+    color: var(--color-secondary);
+}
+
+/* Phrases Section */
+.phrases-section {
+    margin-bottom: 3rem;
+}
+
+.phrases-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 5px solid var(--color-primary);
+}
+
+.phrases-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.phrase-card {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    padding: 2rem;
+    border: 3px solid var(--color-primary);
+    position: relative;
+    transition: var(--transition);
+}
+
+.phrase-card:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-xl);
+}
+
+.phrase-card::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--color-primary);
+    opacity: 0.3;
+    line-height: 1;
+}
+
+.phrase-text {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.phrase-author {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+/* Sagas Section (Saint Seiya) */
+.sagas-section {
+    margin-bottom: 3rem;
+}
+
+.sagas-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    padding-left: 1.5rem;
+    border-left: 5px solid var(--color-primary);
+}
+
+.sagas-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.saga-card {
+    background: var(--color-accent);
+    border: 3px solid var(--color-secondary);
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.saga-card:hover {
+    background: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.saga-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.saga-card p {
+    color: var(--color-gray);
+    line-height: 1.6;
+}
+
+.saga-card:hover p {
+    color: var(--color-secondary);
+}
+
+/* Sidebar */
+.manga-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar-card {
+    background: var(--color-white);
+    border: 4px solid var(--color-secondary);
+    padding: 2rem;
+    box-shadow: 5px 5px 0 var(--color-primary);
+}
+
+.sidebar-card.highlight {
+    background: var(--color-primary);
+}
+
+.sidebar-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--color-secondary);
+}
+
+.sidebar-list {
+    list-style: none;
+}
+
+.sidebar-list li {
+    padding: 0.75rem 0;
+    border-bottom: 2px solid var(--color-light-gray);
+    font-weight: 600;
+}
+
+.sidebar-list li:last-child {
+    border-bottom: none;
+}
+
+.sidebar-card p {
+    color: var(--color-gray);
+    line-height: 1.7;
+}
+
+.sidebar-card.highlight p {
+    color: var(--color-secondary);
+}
+
+/* ========================================
+   SECCIÓN COMPARATIVA
+   ======================================== */
+.section-comparison {
+    background: var(--color-secondary);
+    padding: 6rem 0;
+    color: var(--color-white);
+}
+
+.section-comparison .section-title {
+    color: var(--color-white);
+}
+
+.comparison-table {
+    background: var(--color-white);
+    border: 4px solid var(--color-primary);
+    margin-bottom: 4rem;
+    overflow: hidden;
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    background: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.comparison-header .comp-col {
+    padding: 1.5rem;
+    font-family: var(--font-display);
+    font-weight: 900;
+    font-size: 1.1rem;
+    text-align: center;
+    border-right: 3px solid var(--color-secondary);
+}
+
+.comparison-header .comp-col:last-child {
+    border-right: none;
+}
+
+.comparison-header .pokemon {
+    background: #FFD700;
+}
+
+.comparison-header .dragonball {
+    background: #FF6B35;
+}
+
+.comparison-header .saintseiya {
+    background: #4A90E2;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    border-bottom: 2px solid var(--color-light-gray);
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-label {
+    padding: 1.5rem;
+    font-weight: 800;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+}
+
+.comparison-data {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-gray);
+    border-left: 2px solid var(--color-light-gray);
+}
+
+.comparison-summary {
+    background: rgba(255,255,255,0.05);
+    border: 3px solid var(--color-primary);
+    padding: 3rem;
+}
+
+.comparison-summary h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--color-primary);
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.summary-item {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255,255,255,0.05);
+    border: 3px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.summary-item:hover {
+    background: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.summary-item:hover h4,
+.summary-item:hover p {
+    color: var(--color-secondary);
+}
+
+.summary-icon {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.summary-item h4 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+    color: var(--color-primary);
+}
+
+.summary-item p {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* ========================================
+   GALERÍA MANGA
+   ======================================== */
+.section-gallery-manga {
+    background: var(--color-accent);
+    padding: 4rem 0;
+}
+
+.gallery-manga-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+grid-auto-rows: 280px;
+    gap: 1.5rem;
+}
+
+.gallery-manga-item {
+    position: relative;
+    overflow: hidden;
+    border: 3px solid var(--color-secondary);
+    cursor: pointer;
+}
+
+.gallery-manga-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.gallery-manga-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-manga-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: var(--color-white);
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.gallery-manga-item:hover .gallery-manga-caption {
+    transform: translateY(0);
+}
+
+.gallery-manga-caption h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--color-primary);
+}
+
+.gallery-manga-caption p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Imagen GRANDE - ocupa 2x2 (cuadrado grande) */
+.gallery-manga-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Imagen RECTANGULAR HORIZONTAL - ocupa 2 columnas x 1 fila */
+.gallery-manga-item.wide {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+/* Imagen RECTANGULAR VERTICAL - ocupa 1 columna x 2 filas */
+.gallery-manga-item.tall {
+    grid-column: span 1;
+    grid-row: span 2;
+}
+
+/* ========================================
+   CTA FINAL
+   ======================================== */
+.section-cta-manga {
+    background: var(--color-secondary);
+    padding: 8rem 0;
+    text-align: center;
+}
+
+.cta-manga-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-manga-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.cta-manga-content p {
+    font-size: 1.25rem;
+    color: #ccc;
+    margin-bottom: 3rem;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.main-footer {
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border-top: 4px solid var(--color-primary);
+    padding: 5rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.footer-brand h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.footer-brand p {
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.footer-links h4,
+.footer-info h4 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: #999;
+    transition: var(--transition);
+    font-weight: 600;
+}
+
+.footer-links a:hover {
+    color: var(--color-primary);
+    padding-left: 5px;
+}
+
+.footer-info p {
+    color: #999;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.footer-bottom {
+    padding-top: 3rem;
+    border-top: 2px solid rgba(255,255,255,0.1);
+    text-align: center;
+}
+
+.copyright {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+    .manga-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .manga-sidebar {
+        order: -1;
+    }
+    
+    .impact-grid,
+    .phrases-grid,
+    .sagas-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .terms-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .term-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .term-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .comparison-header,
+    .comparison-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-label {
+        background: var(--color-primary);
+        color: var(--color-secondary);
+    }
+    
+    .comparison-data {
+        border-left: none;
+        border-top: 2px solid var(--color-light-gray);
+    }
+    
+    .summary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .gallery-manga-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    
+    .gallery-manga-item.large {
+        grid-column: span 2;
+        grid-row: span 1;
+        height: 400px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .hero-manga {
+        padding: 6rem 1rem 10rem;
+    }
+    
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .intro-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .timeline {
+        max-width: 100%;
+    }
+    
+    .phrases-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .summary-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-manga-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-manga-item.large,
+    .gallery-manga-item.wide {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 4rem 0;
+    }
+    
+    .manga-card-large,
+    .sidebar-card,
+    .impact-card,
+    .phrase-card {
+        padding: 1.5rem;
+    }
+}
