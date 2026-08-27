@@ -25,13 +25,12 @@
                 <a href="#tecnicas">Técnicas</a>
                 <a href="#casos">Casos</a>
                 <a href="#galeria">Galería</a>
-                <a href="#contacto" class="btn-nav">Únete</a>
             </div>
             <button class="mobile-menu-toggle">☰</button>
         </nav>
     </header>
 
-    <!-- HERO SECTION - Impactante como la referencia -->
+    <!-- HERO SECTION  -->
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -49,10 +48,6 @@
                 Una exploración gráfica sobre cómo el noveno arte revoluciona 
                 nuestra comunicación y enriquece el español contemporáneo.
             </p>
-            <div class="hero-cta">
-                <button class="btn-primary">Comenzar el Recorrido</button>
-                <button class="btn-secondary">Ver Galería</button>
-            </div>
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">9°</span>
@@ -403,7 +398,7 @@
                                 <li>Nombres japoneses normalizados</li>
                             </ul>
                         </div>
-                        <button class="case-btn"><a href="./manga.html">Explorar Caso</a></button>
+                        <button class="case-btn"><a href="./manga.html #pokemon">Explorar Caso</a></button>
                     </div>
                 </article>
 
@@ -432,7 +427,7 @@
                                 <li>Retórica del heroísmo</li>
                             </ul>
                         </div>
-                        <button class="case-btn"><a href="./manga.html">Explorar Caso</a></button>
+                        <button class="case-btn"><a href="./manga.html #dragonball">Explorar Caso</a></button>
                     </div>
                 </article>
 
@@ -461,7 +456,7 @@
                                 <li>Dramatismo en el lenguaje</li>
                             </ul>
                         </div>
-                        <button class="case-btn"><a href="./manga.html">Explorar Caso</a></button>
+                        <button class="case-btn"><a href="./manga.html #saintseiya">Explorar Caso</a></button>
                     </div>
                 </article>
             </div>
@@ -549,7 +544,6 @@
                 <h2>¿Listo para Explorar el Lenguaje Visual?</h2>
                 <p>Únete a nosotros en esta celebración del Día del Idioma Español y descubre cómo el cómic transforma nuestra forma de comunicarnos.</p>
                 <div class="cta-buttons">
-                    <button class="btn-primary btn-large">Comenzar Ahora</button>
                 </div>
                 <div class="cta-extra">
                     <p>📅 23 de Abril - Día del Idioma Español</p>
@@ -559,45 +553,64 @@
     </section>
 
     <!-- Footer Mejorado -->
-    <footer class="main-footer">
+   <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
                     <h3>Entre Viñetas y Palabras</h3>
                     <p>El idioma también se dibuja.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Instagram">📷</a>
-                        <a href="#" aria-label="Twitter">🐦</a>
-                        <a href="#" aria-label="YouTube">📺</a>
-                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>Explora</h4>
                     <ul>
-                        <li><a href="#concepto">Concepto</a></li>
-                        <li><a href="#manga">Manga</a></li>
-                        <li><a href="#tecnicas">Técnicas</a></li>
-                        <li><a href="#casos">Casos</a></li>
+                        <li><a href="index.html">Página Principal</a></li>
+                        <li><a href="#pokemon">Pokémon</a></li>
+                        <li><a href="#dragonball">Dragon Ball</a></li>
+                        <li><a href="#saintseiya">Saint Seiya</a></li>
                     </ul>
                 </div>
-                <div class="footer-links">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="#">Guía de Estudio</a></li>
-                        <li><a href="#">Bibliografía</a></li>
-                        <li><a href="#">Enlaces Útiles</a></li>
-                    </ul>
+                <div class="footer-info">
+                    <h4>Información</h4>
+                    <p>Día del Idioma Español 2026</p>
+                    <p>© 2026 Grupo de Diseño Gráfico</p>
+                    <p>UNIVERSIDAD DE BOYACÁ</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2026. Todos los derechos reservados.</p>
-                <p class="footer-date">Día del Idioma Español - 23 de Abril</p>
+                <p class="copyright">Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Botón flotante -->
-    <button class="scroll-to-top" id="scrollTop">↑</button>
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll indicator
+            const scrollIndicator = document.querySelector('.hero-scroll-indicator');
+            if (scrollIndicator) {
+                scrollIndicator.addEventListener('click', function() {
+                    const nextSection = document.querySelector('.marquee-container');
+                    if (nextSection) {
+                        nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            }
+
+            // Smooth scroll para links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>
