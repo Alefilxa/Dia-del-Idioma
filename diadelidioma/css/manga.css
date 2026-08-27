@@ -821,7 +821,7 @@ a {
 .section-comparison {
     background: var(--color-secondary);
     padding: 6rem 0;
-    color: var(--color-white);
+    color: #000;
 }
 
 .section-comparison .section-title {
@@ -875,6 +875,14 @@ a {
 
 .comparison-row:last-child {
     border-bottom: none;
+}
+
+.comp-label .comp-data{
+    background: #1a1a1a;
+    font-weight: 800;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
 }
 
 .comparison-label {
